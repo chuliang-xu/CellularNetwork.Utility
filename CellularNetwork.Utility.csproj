@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extention.Range.T.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Generic\RangeExtention.cs" />
+  </ItemGroup>
+
+</Project>
