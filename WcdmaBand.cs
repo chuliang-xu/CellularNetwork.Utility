@@ -19,15 +19,15 @@ namespace CellularNetwork.Utility
         /// </summary>
         public const int ChannelRaster = 200;
         /// <summary>
-        /// 名称Band1、Band2...
+        /// Band名称 Band1、Band2...
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// UL频率范围(MHz),3GPP 4.2 Frequency bands
+        /// UL频率范围(MHz)
         /// </summary>
         public Range<decimal> FrequencyUL { get; set; }
         /// <summary>
-        /// DL频率范围(MHz),3GPP 4.2 Frequency bands
+        /// DL频率范围(MHz)
         /// </summary>
         public Range<decimal> FrequencyDL { get; set; }
         ///// <summary>
@@ -89,7 +89,7 @@ namespace CellularNetwork.Utility
         }
 
         /// <summary>
-        /// 由Band Frequency Range获得Uarfcn Frequency Range
+        /// 由Band Frequency Range获得Uarfcn Frequency Range，少数几个不是200KHz整数倍的偏移2.5，其他都偏移2.4
         /// </summary>
         Range<decimal> GetUarfcnFrequency(Range<decimal> frequency)
         {
@@ -99,9 +99,7 @@ namespace CellularNetwork.Utility
             decimal offset = 2.4m;
             if ((int)(frequency.Start * 10) % 2 != 0)
                 offset = 2.5m;
-            decimal start = frequency.Start + offset;
-            decimal end = frequency.End - offset;
-            return new Range<decimal>(start, end);
+            return new Range<decimal>(frequency.Start + offset, frequency.End - offset);
         }
 
         public decimal GetFrequencyUL(int channel) => (decimal)channel / 5 + FormulaOffsetUL;

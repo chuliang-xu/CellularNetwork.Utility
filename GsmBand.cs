@@ -56,11 +56,11 @@ namespace CellularNetwork.Utility
         ///// <returns>如果也跟不是这个Band范围则返回0</returns>
         //public int GetChannel(decimal frequency)
         //{
-        //    if (FrequencyTX.InTheRange(frequency))
+        //    if (FrequencyTX.Include(frequency))
         //    {
         //        return (int)((frequency - FrequencyTX.Start) * 200) + Channel.Start;
         //    }
-        //    else if (FrequencyRX.InTheRange(frequency))
+        //    else if (FrequencyRX.Include(frequency))
         //    {
         //        return (int)((frequency - FrequencyRX.Start) * 200) + Channel.Start;
         //    }

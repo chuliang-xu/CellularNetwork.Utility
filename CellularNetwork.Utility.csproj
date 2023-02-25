@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>chuliangxu.hf</Authors>
+    <Description>蜂窝网络通用，GSM、WCDMA、LTE、NR使用的频段等基本信息。 </Description>
+    <RepositoryUrl>https://github.com/chuliang-xu/CellularNetwork.Utility</RepositoryUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

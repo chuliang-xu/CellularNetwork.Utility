@@ -31,9 +31,13 @@ namespace CellularNetwork.Utility
         public static WcdmaBand Band25 { get { return new WcdmaBand("Band25", new Range<decimal>(1850, 1915), new Range<decimal>(1930, 1995), 875, 910); } }
         public static WcdmaBand Band26 { get { return new WcdmaBand("Band26", new Range<decimal>(814, 849), new Range<decimal>(859, 894), -291, -291); } }
 
-        public static WcdmaBand Band0 { get { return new WcdmaBand(); } }
-
-        public static WcdmaBand[] Bands = new WcdmaBand[] { Band1, Band2, Band3, Band4, Band5, Band6, Band7, Band8, Band9, Band10,
-            Band11, Band12, Band13, Band14, Band19, Band20, Band21, Band22, Band25, Band26 };
+        public static WcdmaBand[] Bands
+        {
+            get
+            {
+                return new WcdmaBand[] { Band1, Band2, Band3, Band4, Band5, Band6, Band7, Band8, Band9, Band10,
+                    Band11, Band12, Band13, Band14, Band19, Band20, Band21, Band22, Band25, Band26 };
+            }
+        }
     }
 }

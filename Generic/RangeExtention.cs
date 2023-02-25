@@ -15,7 +15,7 @@ namespace CellularNetwork.Utility.Generic
             return range.End - range.Start;
         }
 
-        public static bool InTheRange(this Range<int> range, int value, bool CanEqualS = true, bool CanEqualE = true)
+        public static bool Include(this Range<int> range, int value, bool CanEqualS = true, bool CanEqualE = true)
         {
             if (value > range.Start && value < range.End)
                 return true;
@@ -28,7 +28,7 @@ namespace CellularNetwork.Utility.Generic
 
             return false;
         }
-        public static bool InTheRange(this Range<decimal> range, decimal value, bool CanEqualS = true, bool CanEqualE = true)
+        public static bool Include(this Range<decimal> range, decimal value, bool CanEqualS = true, bool CanEqualE = true)
         {
             if (value > range.Start && value < range.End)
                 return true;
